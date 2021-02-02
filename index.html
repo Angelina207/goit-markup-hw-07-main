@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Студия</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./dist/css/main.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -16,34 +16,34 @@
 <body>
     <!--Главные ссылки в шапке сайта-->
     <header>
-        <div class="container header-nav">
-            <nav class="item-link">
-                <a class="logo" href="WebStudio"><span class="style-logo">Web</span>Studio</a>
+        <div class="container header--flex">
+            <nav class="navigation">
+                <a class="logo" href="WebStudio"><span class="logo--blue">Web</span>Studio</a>
 
-                <ul class="list-header">
-                    <li class="current-link">
-                        <a class="current" href="./index.html">Студия</a>
+                <ul class="header-nav">
+                    <li class="header__list">
+                        <a class="header__current" href="./index.html">Студия</a>
                     </li>
-                    <li class="current-link">
-                        <a class="site-nav" href="./portfolio.html">Портфолио</a>
+                    <li class="header__list">
+                        <a class="header__link" href="./portfolio.html">Портфолио</a>
                     </li>
-                    <li class="current-link">
-                        <a class="site-nav" href="Контакты">Контакты</a>
+                    <li class="header__list">
+                        <a class="header__link" href="Контакты">Контакты</a>
                     </li>
                 </ul>
             </nav>
 
-            <ul class="links-style">
+            <ul class="communication-links">
                 <li>
-                    <a class="header-link" href="email:info@devstudio.com">
-                        <svg class="svg-envelope">
+                    <a class="comm__links" href="email:info@devstudio.com">
+                        <svg class="comm__envelope">
                             <use href="./images/symbol-defs.svg#icon-envelope-hover"></use>
                         </svg> info@devstudio.com
                     </a>
                 </li>
                 <li>
-                    <a class="header-link" href="tel:+38096111111">
-                        <svg class="svg-smartphone">
+                    <a class="comm__links" href="tel:+38096111111">
+                        <svg class="comm__smart">
                             <use href="./images/symbol-defs.svg#icon-smartphone"></use>
                         </svg> +38 096 111 11 11</a>
                 </li>
@@ -53,7 +53,7 @@
 
     <!--Основная информация о компании-->
     <main>
-        <section class="section-title">
+        <section class="sec-busy">
             <div class="">
                 <h1 class="title">Эффективные решения<br> для вашего бизнеса</h1>
                 <button class="button" data-modal-open>Заказать услугу</button>
@@ -378,28 +378,66 @@
                     </ul>
                 </div>
                 <div>
-                    <p class="text-join">
+                    <p class="text-mailing">
                         ПОДПИШИТЕСЬ НА РАССЫЛКУ
                     </p>
                     <form name="email">
                         <input class="footer-email" type="text" name="email" placeholder="E-mail">
                     </form>
                 </div>
-
-                <button class="btn-send">Подписаться
+                <div class="send-btn-style">
+                    <button class="btn-send">Подписаться
                     <svg class="svg-send">
                         <use href="./images/symbol-defs.svg#icon-icon-send-1"></use>
                     </svg>
                 </button>
-
-
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Модальное окно -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="btn-close" data-modal-close>✖</button>
+            <div class="modal-content">
+                <p class="data-customers">
+                    Оставьте свои данные, мы вам перезвоним
+                </p>
+                <form>
+                    <div class="modal-form">
+                        <label class="label-style" for="name">Имя</label>
+                        <input class="input-style" type="text" name="name" id="name">
+                        <svg class="modal-icon">
+                            <use href="./images/symbol-defs.svg#icon-name"></use>
+                        </svg>
+                    </div>
+                    <div class="modal-form">
+                        <label class="label-style" for="phone">Телефон</label>
+                        <input class="input-style" type="tel" name="phone" id="phone">
+                        <svg class="modal-icon">
+                            <use href="./images/symbol-defs.svg#icon-telephoneicon-telephone"></use>
+                        </svg>
+                    </div>
+                    <div class="modal-form">
+                        <label class="label-style" for="email">Почта</label>
+                        <input class="input-style" type="email" id="email">
+                        <svg class="modal-icon">
+                            <use href="./images/symbol-defs.svg#icon-email"></use>
+                        </svg>
+                    </div>
+                    <label class="label-style" for="comments">Комментарий</label>
+                    <textarea class="comments-modal" name="comment" id="comments" placeholder="Введите текст"></textarea>
+
+                    <label class="label-consent">
+                        <input class="check-style" type="checkbox" name="mailing">
+                        <span class="mailing"></span>
+                        <p class="check-text">Соглашаюсь с рассылкой и принимаю <a href="#" class="link-consent">Условия договора</a></p>
+                    </label>
+                </form>
+
+                <button class="modal-send-btn">Отправить</button>
+            </div>
         </div>
     </div>
 

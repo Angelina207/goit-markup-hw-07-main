@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./dist/css/main.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -17,34 +17,34 @@
 <body>
     <!-- шапка сайта -->
     <header>
-        <div class="container header-nav">
-            <nav class="item-link">
-                <a class="logo" href="WebStudio"><span class="style-logo">Web</span>Studio</a>
+        <div class="container header--flex">
+            <nav class="navigation">
+                <a class="logo" href="WebStudio"><span class="logo--blue">Web</span>Studio</a>
 
-                <ul class="list-header">
-                    <li class="current-link">
-                        <a class="site-nav" href="./index.html">Студия</a>
+                <ul class="header-nav">
+                    <li class="header__list">
+                        <a class="header__link" href="./index.html">Студия</a>
                     </li>
-                    <li class="current-link">
-                        <a class="current" href="./portfolio.html">Портфолио</a>
+                    <li class="header__list">
+                        <a class="header__current" href="./portfolio.html">Портфолио</a>
                     </li>
-                    <li class="current-link">
-                        <a class="site-nav" href="Контакты">Контакты</a>
+                    <li class="header__list">
+                        <a class="header__link" href="Контакты">Контакты</a>
                     </li>
                 </ul>
             </nav>
 
-            <ul class="links-style">
+            <ul class="communication-links">
                 <li>
-                    <a class="header-link" href="email:info@devstudio.com">
-                        <svg class="svg-envelope">
+                    <a class="comm__links" href="email:info@devstudio.com">
+                        <svg class="comm__envelope">
                             <use href="./images/symbol-defs.svg#icon-envelope-hover"></use>
                         </svg> info@devstudio.com
                     </a>
                 </li>
                 <li>
-                    <a class="header-link" href="tel:+38096111111">
-                        <svg class="svg-smartphone">
+                    <a class="comm__links" href="tel:+38096111111">
+                        <svg class="comm__smart">
                             <use href="./images/symbol-defs.svg#icon-smartphone"></use>
                         </svg> +38 096 111 11 11</a>
                 </li>
@@ -240,36 +240,52 @@
                         <li class="">
                             <a href="#" class="svg-link-footer">
                                 <svg class="svg-footer">
-                                    <use href="./images/symbol-defs.svg#icon-instagram-2"></use>
-                                </svg>
+                            <use href="./images/symbol-defs.svg#icon-instagram-2"></use>
+                        </svg>
                             </a>
                         </li>
                         <li class="">
                             <a href="#" class="svg-link-footer">
                                 <svg class="svg-footer">
-                                    <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
-                                </svg>
+                            <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
+                        </svg>
                             </a>
                         </li>
                         <li class="">
                             <a href="#" class="svg-link-footer">
                                 <svg class="svg-footer">
-                                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                                </svg>
+                            <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                        </svg>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="svg-link-footer">
                                 <svg class="svg-footer">
-                                    <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>
-                                </svg>
+                            <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>
+                        </svg>
                             </a>
                         </li>
                     </ul>
                 </div>
+                <div>
+                    <p class="text-mailing">
+                        ПОДПИШИТЕСЬ НА РАССЫЛКУ
+                    </p>
+                    <form name="email">
+                        <input class="footer-email" type="text" name="email" placeholder="E-mail">
+                    </form>
+                </div>
+                <div class="send-btn-style">
+                    <button class="btn-send">Подписаться
+                    <svg class="svg-send">
+                        <use href="./images/symbol-defs.svg#icon-icon-send-1"></use>
+                    </svg>
+                </button>
+                </div>
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
